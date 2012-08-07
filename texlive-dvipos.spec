@@ -1,12 +1,12 @@
-# revision 23089
+# revision 26689
 # category TLCore
 # catalog-ctan undef
 # catalog-date undef
 # catalog-license undef
 # catalog-version undef
 Name:		texlive-dvipos
-Version:	20111103
-Release:	2
+Version:	20120807
+Release:	1
 Summary:	TeXLive dvipos package
 Group:		Publishing
 URL:		http://tug.org/texlive
