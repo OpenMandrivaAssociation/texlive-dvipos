@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-dvipos
 Version:	20140619
-Release:	1
+Release:	2
 Summary:	TeXLive dvipos package
 Group:		Publishing
 URL:		http://tug.org/texlive
