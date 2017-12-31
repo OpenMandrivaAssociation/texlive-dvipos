@@ -1,9 +1,3 @@
-# revision 33736
-# category TLCore
-# catalog-ctan undef
-# catalog-date undef
-# catalog-license undef
-# catalog-version undef
 Name:		texlive-dvipos
 Version:	20171105
 Release:	1
