@@ -1,5 +1,5 @@
 Name:		texlive-dvipos
-Version:	20171105
+Version:	20180331
 Release:	1
 Summary:	TeXLive dvipos package
 Group:		Publishing
