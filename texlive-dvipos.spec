@@ -1,6 +1,6 @@
 Name:		texlive-dvipos
 Version:	20180331
-Release:	1
+Release:	2
 Summary:	TeXLive dvipos package
 Group:		Publishing
 URL:		http://tug.org/texlive
