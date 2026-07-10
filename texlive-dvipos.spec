@@ -1,33 +1,22 @@
-Name:		texlive-dvipos
-Version:	66186
+%global tl_name dvipos
+%global tl_revision 66186
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
 Release:	1
-Summary:	TeXLive dvipos package
+Summary:	support DVI pos: specials used by ConTeXt DVI output
 Group:		Publishing
-URL:		https://tug.org/texlive
-License:	http://www.tug.org/texlive/LICENSE.TL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dvipos.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dvipos.doc.r%{version}.tar.xz
+URL:		https://www.ctan.org/pkg/dvipos
+License:	LPPL
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/dvipos.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/dvipos.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires:	texlive-dvipos.bin
+%texlive_base_requires
+Requires:	texlive(dvipos.bin)
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-TeXLive dvipos package.
+support DVI pos: specials used by ConTeXt DVI output
 
-#-----------------------------------------------------------------------
-%files
-%doc %{_mandir}/man1/dvipos.1*
-%doc %{_texmfdistdir}/doc/man/man1/dvipos.man1.pdf
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf-dist %{buildroot}%{_datadir}
-mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
